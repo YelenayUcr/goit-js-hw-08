@@ -1,2 +1,2 @@
-# goit-js-hw-08
+# İmage Gallery
  
