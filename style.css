@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    
+}
+main {  
+max-width: 100;
+  width: 1440px;
+       height: 696px;  
+        padding: 24px 156px 24px 156px;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+  
+    align-items: center;
+
+    gap: 10px;
+}
+.gallery-style {
+    flex: 1 1 calc(33.333% - 10px);
+        max-width: calc(33.333% - 10px);
+   
+        overflow: hidden;
+        cursor: pointer;
+    }
+    
+    .gallery-image {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
