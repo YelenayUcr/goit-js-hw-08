@@ -66,26 +66,32 @@ const images = [
 
 const galleryContainer = document.querySelector('.gallery');
 
-const galleryMarkup = images
+const galleryItem = images
   .map(
     ({ preview, original, description }) => `
   <li class="gallery-style">
+  <a class="gallery-link" href="${original}">
     <img
       class="gallery-image"
       src="${preview}"
       data-source="${original}"
       alt="${description}"
     />
+    </a>
   </li>
 `
   ).join('');
   
-galleryContainer.innerHTML= galleryMarkup;
+galleryContainer.innerHTML= galleryItem;
 
 galleryContainer.addEventListener('click', onGalleryClick);
 
 function onGalleryClick(event) {
- 
+  event.preventDefault();
+  if (event.target.nodeName !== 'IMG') {
+    return;
+  }
+
 const largeImageURL = event.target.dataset.source; 
 
   const instance = basicLightbox.create(`
