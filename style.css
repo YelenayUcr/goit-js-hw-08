@@ -6,9 +6,11 @@ body {
     
 }
 main {  
+    max-width: 100%;
   width: 1440px;
        height: 696px;  
-        padding: 24px 156px 24px 156px;
+        padding: 24px 156px ;
+        margin-left: 64px;
 }
 .gallery {
     display: flex;
@@ -22,23 +24,28 @@ main {
 .gallery-style {
     flex: 1 1 calc(33.333% - 10px);
         max-width: calc(33.333% - 10px);
-   
-        padding: 0;
+
         overflow: hidden;
         cursor: pointer;
           width: 360px;
             height: 300px;
             margin-bottom: 10px;
+                margin-right: 10px;
     }
     
     .gallery-image {
-   
+        max-width: 100%;
         height: auto;
-        display: block;
-        width: 360px;
-            height: 300px;
-        flex-wrap: wrap;
+  
+  
+        
         margin-bottom: 10px;
- 
+  
 
+
+    }
+    .gallery-link{
+            width: 360px;
+                height: 300px;
+           
     }
