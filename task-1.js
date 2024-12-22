@@ -81,8 +81,8 @@ const galleryItem = images
   </li>
 `
   ).join('');
-  
-galleryContainer.innerHTML= galleryItem;
+
+galleryContainer.innerHTML = galleryItem;
 
 galleryContainer.addEventListener('click', onGalleryClick);
 
@@ -92,7 +92,7 @@ function onGalleryClick(event) {
     return;
   }
 
-const largeImageURL = event.target.dataset.source; 
+  const largeImageURL = event.target.dataset.source;
 
   const instance = basicLightbox.create(`
     <img src="${largeImageURL}" width="1112" height="640" alt="${event.target.alt}" />
@@ -103,6 +103,6 @@ const largeImageURL = event.target.dataset.source;
   document.addEventListener('keydown', (esc) => {
     if (esc.key === 'Escape') {
       instance.close();
-    } 
+    }
   });
 }
